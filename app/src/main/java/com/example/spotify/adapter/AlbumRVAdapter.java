@@ -11,7 +11,6 @@ import com.squareup.picasso.Picasso;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.spotify.AlbumDetailActivity;
 import com.example.spotify.R;
 import com.example.spotify.models.AlbumRVModal;
 
@@ -48,7 +47,7 @@ public class AlbumRVAdapter extends RecyclerView.Adapter<AlbumRVAdapter.ViewHold
             public void onClick(View v) {
                 // on below line opening a new album detail
                 // activity for displaying songs within that album.
-                Intent i = new Intent(context, AlbumDetailActivity.class);
+                Intent i = new Intent(context, null);
                 // on below line passing album related data.
                 i.putExtra("id", albumRVModal.id);
                 i.putExtra("name", albumRVModal.name);
