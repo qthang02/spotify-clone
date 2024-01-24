@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.spotify.components.AlbumDetailActivity;
 import com.squareup.picasso.Picasso;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,7 +49,7 @@ public class AlbumRVAdapter extends RecyclerView.Adapter<AlbumRVAdapter.ViewHold
             public void onClick(View v) {
                 // on below line opening a new album detail
                 // activity for displaying songs within that album.
-                Intent i = new Intent(context, null);
+                Intent i = new Intent(context, AlbumDetailActivity.class);
                 // on below line passing album related data.
                 i.putExtra("id", albumRVModal.id);
                 i.putExtra("name", albumRVModal.name);
